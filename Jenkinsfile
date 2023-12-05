@@ -1,11 +1,12 @@
 pipeline {
   agent { label 'new-workstation'}
-}
 
-stages {
+  stages {
     stage('CI') {
-        steps {
-          echo 'CI'
+      steps {
+        echo 'CI'
       }
    }
+ }
+ 
 }
