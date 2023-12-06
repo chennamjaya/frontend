@@ -33,6 +33,6 @@ pipeline {
       when {
         expression { env.TAG_NAME ==~ ".*" }
       }
- }
- 
+    }
+  }
 } 
