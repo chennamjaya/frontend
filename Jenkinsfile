@@ -2,11 +2,18 @@ pipeline {
   agent { label 'new-workstation'}
 
   stages {
-    stage('CI') {
+
+    stage('Code Quality') {
+      steps {
+        sh 'sonar-scanner -Dsonar.host.url=http://172.31.34.168:9000 -Dsonar.login=admin -Dsonar.password=admin1234 -Dsonar.projectKey=frontend'
+      }
+    }
+
+    stage('Release') {
       steps {
         echo 'CI'
       }
    }
  }
  
-}
+} 
