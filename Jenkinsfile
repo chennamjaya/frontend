@@ -33,6 +33,9 @@ pipeline {
       when {
         expression { env.TAG_NAME ==~ ".*" }
       }
+      steps {
+        echo 'CI'
+      }
     }
   }
 } 
